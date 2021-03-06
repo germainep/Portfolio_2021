@@ -1,11 +1,17 @@
 <template>
-    <Header class="bg-color-primary">
+    <header class="bg-primary relative flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg mb-3">
+      <div class="logo">
+      </div>
+      <Navigation>
 
-    </Header>
+      </Navigation>
+    </header>
 </template>
 
 <script>
+    import Navigation from '~/components/Navigation/Navigation'
     export default {
-        name: 'Header'
+        name: 'Header',
+      components: {Navigation}
     };
 </script>

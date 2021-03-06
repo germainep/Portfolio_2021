@@ -3,8 +3,8 @@
   "private": true,
   "scripts": {
     "build": "gridsome build",
-    "test:unit": "vue-cli-service test:unit",
-    "test:e2e": "vue-cli-service test:e2e",
+    "test:unit": "jest",
+    "test:e2e": "",
     "develop": "gridsome develop",
     "explore": "gridsome explore"
   },
@@ -18,6 +18,8 @@
     "@gridsome/plugin-sitemap": "^0.4.0",
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/vue-remark": "^0.2.6",
+    "@tailwindcss/forms": "^0.2.1",
+    "@tailwindcss/typography": "^0.4.0",
     "@vue/cli-plugin-e2e-cypress": "~4.5.0",
     "@vue/cli-plugin-unit-jest": "~4.5.0",
     "@vue/test-utils": "^1.0.3",
