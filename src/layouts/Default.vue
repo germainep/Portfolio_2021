@@ -1,8 +1,8 @@
 <template>
   <div class="layout">
-   <Header>
-
-   </Header>
+   <Header/>
+    <slot></slot>
+    <Footer/>
   </div>
 </template>
 
@@ -18,8 +18,10 @@ query {
 
 </style>
 <script>
+import Footer from '~/components/Footer/Footer'
 import Header from '~/components/Header/Header'
+
 export default {
-  components: {Header}
+  components: {Footer, Header}
 }
 </script>
