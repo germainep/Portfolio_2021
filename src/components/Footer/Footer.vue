@@ -4,7 +4,7 @@
 
         <div class=''>
           <h3 class='flex flex-rows items-center text-center text-2xl mb-8'>You Can Usually Find Me Somewhere
-                                                                            Below!</h3>
+                                                                            Below</h3>
             <div class=' flex items-center justify-around'>
               <g-link href="https://github.com/germainep">
                 <font-awesome :icon="['fab', 'github']" color="white" size="2x" />
@@ -36,7 +36,7 @@
               <label  class='text-sm' for='message'>Message</label>
               <textarea name='message' class='rounded'/>
             </div>
-            <button class='self-center bg-accent rounded h-8 w-16'>Submit</button>
+            <button class='self-center bg-accent-500 shadow-md shadow-lg rounded h-8 w-16'>Submit</button>
           </form>
         </div>
       </div>
