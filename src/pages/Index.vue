@@ -1,20 +1,22 @@
 <template>
   <Layout>
     <main>
-      <section class='hero grid grid-cols-2 pt-8 bg-gradient-to-b from-primary-500 to-accent-500 relative lg:h-96'>
-        <div class='w-1/2 mx-auto mb-8'>
-          <p class='text-white text-5xl'>
-            Hi, I’m Germaine, Full-Stack Software Engineer
-          </p>
-          <Button>Download Resume</Button>
+      <section class='hero pt-8 bg-gradient-to-b from-primary-500 to-accent-500'>
+        <div class='grid grid-cols-2 z-0'>
+          <div class='w-1/2 mx-auto mb-8'>
+            <p class='text-white text-5xl'>
+              Hi, I’m Germaine, Full-Stack Software Engineer
+            </p>
+            <Button class='mt-8 bg-primary-300'>Download Resume</Button>
+          </div>
+          <div class='w-1/2 m-auto'>
+            <span class='quote text-accent-200 text-lg w-full'>
+              “Creativity can solve almost any problem. The creative act the defeat of
+              habit by originality, overcomes everything. “ ~ George Lois
+            </span>
+          </div>
         </div>
-        <div class='w-1/2 m-auto'>
-          <span class='quote absolute text-accent-200 block text-lg right-0 pr-1 w-2/5'>
-            “Creativity can solve almost any problem. The creative act the defeat of
-            habit by originality, overcomes everything. “ ~ George Lois
-          </span>
-        </div>
-        <div class='custom-shape-divider-bottom-1615398229 h-10'>
+        <div class='custom-shape-divider-bottom-1615398229'>
           <svg data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'>
             <path
                 d='M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z'
@@ -23,9 +25,9 @@
         </div>
       </section>
 
-      <section class='mt-20 px-8'>
+      <section class='mt-20 p-8'>
         <h2 class='text-4xl text-center'>
-          Your business is more than <span class='text-primary-300'>just</span> a website
+          Your business is more than <span class='text-primary-600'>just</span> a website
         </h2>
 
         <div class='grid grid-cols-3 gap-3 my-8 h-auto px-4'>
@@ -104,9 +106,9 @@
         </div>
       </section>
 
-      <section class='skills h-96 px-8'>
+      <section class='skills p-8'>
         <h2 class='text-right'>Skills</h2>
-        <SkillsBox></SkillsBox>
+        <SkillsBox/>
 
       </section>
     </main>
@@ -122,8 +124,8 @@ import SkillsBox from '~/components/SkillsBox/SkillsBox'
 export default {
   metaInfo: {
     title: 'Home',
-    components: {SkillsBox, Button},
   },
+  components: {SkillsBox, Button},
 }
 </script>
 
@@ -134,9 +136,6 @@ export default {
 }
 
 .custom-shape-divider-bottom-1615398229 {
-  position    : absolute;
-  bottom      : 0;
-  left        : 0;
   width       : 100%;
   overflow    : hidden;
   line-height : 0;

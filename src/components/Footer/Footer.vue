@@ -1,5 +1,5 @@
 <template>
-  <footer class='bg-primary-500 relative py-2'>
+  <footer class='bg-primary-500 py-2 z-10 mt-10'>
     <div class='grid grid-rows-2 gap-6 p-12 lg:p-4 items-center justify-center'>
       <div class='contact w-full mx-auto lg:w-1/2'>
         <form class='grid grid-cols-2 grid-rows-3 gap-3 w-full items-center'>

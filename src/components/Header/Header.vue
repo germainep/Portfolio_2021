@@ -1,5 +1,5 @@
 <template>
-    <header class='bg-primary-500 relative flex flex-wrap items-center justify-between px-2 py-3'>
+    <header class='bg-primary-500 flex flex-wrap items-center justify-between px-2 py-3'>
       <div class='logo'>
       </div>
       <Navigation/>
