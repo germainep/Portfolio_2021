@@ -1,5 +1,5 @@
 <template>
-    <nav class="Navigation lg:flex flex-grow items-center">
+    <nav class='Navigation lg:flex flex-grow items-center justify-self-end'>
       <ul class='flex flex-col lg:flex-row list-none ml-auto'>
         <NavItem to='/'>Home</NavItem>
         <NavItem to='/projects'>Work</NavItem>
