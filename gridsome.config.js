@@ -14,21 +14,21 @@ module.exports = {
   plugins: [
     { use: "@gridsome/plugin-sitemap" },
     {
-      use: "@gridsome/source-filesystem",
+      use: "@gridsome/vue-remark",
       options: {
-        baseDir: "./content/blog",
-        typeName: "BlogPost",
-        pathPrefix: "/blog",
-        path: "/:title",
-        remark: {},
+        typeName: "Project",
+        baseDir: "./content/Projects",
+        route: "/project/:title",
+        template: "./src/templates/Project.vue",
       },
     },
     {
       use: "@gridsome/vue-remark",
       options: {
-        typeName: "Project",
-        baseDir: "./content/projects",
-        route: "/project/:title",
+        typeName: "BlogPost",
+        baseDir: "./content/BlogPosts",
+        route: "/blog/:slug",
+        template: "./src/templates/BlogPost.vue",
       },
     },
     {
@@ -64,19 +64,5 @@ module.exports = {
         plugins: postcssPlugins,
       },
     },
-  },
-  templates: {
-    Project: [
-      {
-        path: "/project/:title",
-        component: "./src/templates/Project.vue",
-      },
-    ],
-    BlogPost: [
-      {
-        path: "/blog/:slug",
-        component: "./src/templates/Blog.vue",
-      },
-    ],
   },
 };

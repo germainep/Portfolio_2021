@@ -117,6 +117,21 @@
   </Layout>
 </template>
 
+<page-query>
+query Project{
+projects: allProject{
+edges{
+node{
+title
+path
+url
+github
+}
+}
+}
+}
+</page-query>
+
 <script>
 import Button from '~/components/Button/Button'
 import SkillsBox from '~/components/SkillsBox/SkillsBox'
