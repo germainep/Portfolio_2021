@@ -65,4 +65,18 @@ module.exports = {
       },
     },
   },
+  templates: {
+    Project: [
+      {
+        path: "/project/:title",
+        component: "./src/templates/Project.vue",
+      },
+    ],
+    BlogPost: [
+      {
+        path: "/blog/:slug",
+        component: "./src/templates/Blog.vue",
+      },
+    ],
+  },
 };
