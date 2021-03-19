@@ -114,6 +114,9 @@
 
       <section v-if='$page.projects'>
         <h2 class='text-left'>Recent Work</h2>
+        <div>
+          <Card></Card>
+        </div>
 
       </section>
     </main>
@@ -139,13 +142,14 @@ github
 
 <script>
 import Button from '~/components/Button/Button'
+import Card from '~/components/Card'
 import SkillsBox from '~/components/SkillsBox/SkillsBox'
 
 export default {
   metaInfo: {
     title: 'Home',
   },
-  components: {SkillsBox, Button},
+  components: {SkillsBox, Button, Card},
 }
 </script>
 
