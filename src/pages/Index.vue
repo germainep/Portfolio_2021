@@ -142,7 +142,7 @@ github
 
 <script>
 import Button from '~/components/Button/Button'
-import Card from '~/components/Card'
+import Card from '~/components/Card/Card'
 import SkillsBox from '~/components/SkillsBox/SkillsBox'
 
 export default {
