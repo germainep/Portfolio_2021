@@ -111,6 +111,11 @@
         <SkillsBox/>
 
       </section>
+
+      <section v-if='$page.projects'>
+        <h2 class='text-left'>Recent Work</h2>
+
+      </section>
     </main>
 
 
