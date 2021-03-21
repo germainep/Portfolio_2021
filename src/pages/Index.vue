@@ -107,15 +107,16 @@
       </section>
 
       <section class='skills p-8'>
-        <h2 class='text-right'>Skills</h2>
+        <h2 class='text-right mb-8'>Skills</h2>
         <SkillsBox/>
 
       </section>
 
       <section v-if='$page.projects'>
-        <h2 class='text-left'>Recent Work</h2>
-        <div>
-          <Card></Card>
+        <h2 class='text-left mb-8'>Recent Work</h2>
+        <div class='grid grid-cols-2 gap-2 items-center justify-around'>
+          <Card v-for='edge in $page.projects.edges' :key='edge.node.id' :title='edge.node.title'
+                :description='edge.node.short' :github='edge.node.github' :live='edge.node.url'></Card>
         </div>
 
       </section>
@@ -134,6 +135,8 @@ title
 path
 url
 github
+id
+short: short_desc
 }
 }
 }
