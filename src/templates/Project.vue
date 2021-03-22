@@ -1,7 +1,13 @@
 <template>
-  <div class='Project'>
-
-  </div>
+  <Layout>
+    <main class='Project'>
+      <h1>{{ $page.project.title }}</h1>
+      <VueRemarkContent/>
+    </main>
+    <section>
+      <h1>More Projects</h1>
+    </section>
+  </Layout>
 </template>
 <page-query>
 query ($id: ID!) {

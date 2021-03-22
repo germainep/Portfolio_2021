@@ -116,7 +116,8 @@
         <h2 class='text-left mb-8'>Recent Work</h2>
         <div class='grid grid-cols-2 gap-2 items-center justify-around'>
           <Card v-for='edge in $page.projects.edges' :key='edge.node.id' :title='edge.node.title'
-                :description='edge.node.short' :github='edge.node.github' :live='edge.node.url'></Card>
+                :description='edge.node.short' :path='edge.node.path' :github='edge.node.github'
+                :live='edge.node.url'></Card>
         </div>
 
       </section>
