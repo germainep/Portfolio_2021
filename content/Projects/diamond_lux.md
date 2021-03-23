@@ -1,5 +1,7 @@
 ---
-title: Diamond Luxe Detailing url: https://diamondluxedetail.com
+title: Diamond Luxe Detailing 
+url: https://diamondluxedetail.com
 github: https://github.com/germainep/diamondluxedetail
-short_desc: testing 2
+short_desc: Marketing website built with NextJs and serverless functions.
 ---
+# Brief

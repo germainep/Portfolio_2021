@@ -107,8 +107,18 @@
       </section>
 
       <section class='skills p-8'>
-        <h2 class='text-right'>Skills</h2>
+        <h2 class='text-right mb-8'>Skills</h2>
         <SkillsBox/>
+
+      </section>
+
+      <section v-if='$page.projects'>
+        <h2 class='text-left mb-8'>Recent Work</h2>
+        <div class='grid grid-cols-2 gap-2 items-center justify-around'>
+          <Card v-for='edge in $page.projects.edges' :key='edge.node.id' :title='edge.node.title'
+                :description='edge.node.short' :path='edge.node.path' :github='edge.node.github'
+                :live='edge.node.url'></Card>
+        </div>
 
       </section>
     </main>
@@ -126,6 +136,8 @@ title
 path
 url
 github
+id
+short: short_desc
 }
 }
 }
@@ -134,13 +146,14 @@ github
 
 <script>
 import Button from '~/components/Button/Button'
+import Card from '~/components/Card/Card'
 import SkillsBox from '~/components/SkillsBox/SkillsBox'
 
 export default {
   metaInfo: {
     title: 'Home',
   },
-  components: {SkillsBox, Button},
+  components: {SkillsBox, Button, Card},
 }
 </script>
 

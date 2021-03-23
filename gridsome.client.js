@@ -1,15 +1,15 @@
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { config, library } from "@fortawesome/fontawesome-svg-core";
-import { faMapPin } from "@fortawesome/free-solid-svg-icons";
-import {
-  faGithub,
-  faTwitter,
-  faStackOverflow,
-  faLinkedinIn,
-  faDev,
-  faMediumM,
-} from "@fortawesome/free-brands-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import {
+  faDev,
+  faGithub,
+  faLinkedinIn,
+  faMediumM,
+  faStackOverflow,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+import { faGlobeAmericas, faMapPin } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 config.autoAddCss = true;
 library.add(
@@ -19,7 +19,8 @@ library.add(
   faLinkedinIn,
   faDev,
   faMediumM,
-  faMapPin
+  faMapPin,
+  faGlobeAmericas
 );
 
 export default function (Vue) {
