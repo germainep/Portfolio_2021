@@ -3,7 +3,6 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      textColor: ["active"],
       colors: {
         transparent: "transparent",
         current: "currentColor",
@@ -34,7 +33,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      textColor: ["active"],
+    },
   },
   plugins: [
     require("@tailwindcss/typography"),
