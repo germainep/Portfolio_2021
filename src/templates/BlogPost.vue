@@ -1,13 +1,18 @@
 <template>
-  <div class='BlogPost'>
+  <Layout>
+    <main class='BlogPost container mx-auto'>
+      <h1>{{ $page.post.title }}</h1>
+      <VueRemarkContent/>
 
-  </div>
+    </main>
+  </Layout>
 </template>
 
 <page-query>
 query($id: ID!) {
-blogPost(id: $id) {
+post: blogPost(id: $id) {
 path
+title
 }
 }
 </page-query>

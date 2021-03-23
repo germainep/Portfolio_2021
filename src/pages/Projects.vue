@@ -23,9 +23,11 @@
       }
       edges {
         node {
-          id
           title
           path
+          url
+          github
+          id
           short: short_desc
         }
       }
@@ -37,7 +39,7 @@
 import Card from '~/components/Card/Card'
 
 export default {
-  name: 'recents work',
+  name: 'Projects',
   metaInfo: {
     name: 'Recent Work',
   },

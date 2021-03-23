@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <main class='Project'>
+    <main class='Project container mx-auto'>
       <h1>{{ $page.project.title }}</h1>
       <VueRemarkContent/>
     </main>
