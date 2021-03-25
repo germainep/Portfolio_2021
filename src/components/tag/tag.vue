@@ -1,6 +1,7 @@
 <template>
-    <div class="tag border rounded-sm p-1 bg-accent-500">
-      <span class='text-accent-100'>{{ tagTitle }}</span>
+    <div
+        class="tag text-xs border rounded-2xl p-2 bg-accent-500 text-center m-4 content-center">
+      <span class='text-accent-100'>{{ tag }}</span>
     </div>
 </template>
 
@@ -8,7 +9,8 @@
     export default {
         name: 'Tag',
       props: {
-          tagTitle: ''
+          tag: String
+
       }
     };
 </script>
