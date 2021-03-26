@@ -34,7 +34,11 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      gridColumn: ["first", "last"],
+      gridRow: ["first", "last"],
+      width: ["first"],
+    },
   },
   plugins: [
     require("@tailwindcss/typography"),
