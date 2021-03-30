@@ -1,7 +1,15 @@
 ---
-title: A cool title 
-excerpt: Lorem Ipsum is simply dummy text. 
+title: NextJs serverless contact form 
+excerpt: Building a serverless contact form in NextJs
 slug: serverless
+published: true
 ---
 
 testing this thing out
+
+```js
+const test = function() {
+    return test
+}
+
+```

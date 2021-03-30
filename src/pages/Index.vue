@@ -30,8 +30,8 @@
           Your business is more than <span class='text-primary-600'>just</span> a website
         </h2>
 
-        <div class='grid grid-cols-3 gap-3 my-8 h-auto px-4'>
-          <div class='grid grid-rows-2 items-center'>
+        <div class='flex flex-row my-8 h-auto px-4'>
+          <div class='flex flex-col gap-5 flex-shrink items-center'>
             <div class='mx-auto'>
               <svg xmlns='http://www.w3.org/2000/svg' width='250' height='160' viewBox='0 0 250 160'>
                 <path
@@ -53,7 +53,7 @@
             <p class='text-center'>What good is a website if customers can’t find you.</p>
           </div>
 
-          <div class='grid grid-rows-2 items-center'>
+          <div class='flex flex-col gap-5 flex-shrink items-center'>
             <div class='mx-auto'>
               <svg class='' xmlns='http://www.w3.org/2000/svg' width='197.594' height='160'
                    viewBox='0 0 197.594 160'>
@@ -71,7 +71,7 @@
             <p class='text-center'>I provide clean tested code using best practices.
                                    application.</p>
           </div>
-          <div class='grid grid-rows-2 items-center'>
+          <div class='flex flex-col gap-5 flex-shrink items-center'>
             <div class='mx-auto'>
               <svg xmlns='http://www.w3.org/2000/svg' width='260' height='170' viewBox='0 0 260 170'>
                 <g
@@ -117,7 +117,7 @@
         <div class='grid grid-cols-2 gap-2 items-center justify-around'>
           <Card v-for='edge in $page.projects.edges' :key='edge.node.id' :title='edge.node.title'
                 :description='edge.node.short' :path='edge.node.path' :github='edge.node.github'
-                :live='edge.node.url'></Card>
+                :live='edge.node.url' :image='edge.node.pictures[0]'></Card>
         </div>
 
       </section>
@@ -129,18 +129,22 @@
 
 <page-query>
 query Project{
-projects: allProject{
-edges{
-node{
-title
-path
-url
-github
-id
-short: short_desc
-}
-}
-}
+  projects: allProject{
+    edges{
+      node{
+        title
+        path
+        url
+        github
+        id
+        short: short_desc
+        pictures {
+          id
+          src
+        }
+      }
+    }
+  }
 }
 </page-query>
 

@@ -26,9 +26,6 @@
             const target = {src: el.target.src, alt: el.target.alt}
             this.imagesCopy.splice(index, 1)
             this.imagesCopy.unshift(target)
-
-            console.log(index,  el)
-
           }
 
       }

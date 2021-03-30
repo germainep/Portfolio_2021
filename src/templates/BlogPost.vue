@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <main class='BlogPost container mx-auto'>
+    <main class='BlogPost container mx-auto prose'>
       <h1>{{ $page.post.title }}</h1>
       <VueRemarkContent/>
 
@@ -11,9 +11,9 @@
 <page-query>
 query($id: ID!) {
 post: blogPost(id: $id) {
-path
-title
-}
+  path
+  title
+  }
 }
 </page-query>
 

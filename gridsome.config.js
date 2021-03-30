@@ -3,6 +3,7 @@
 
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
+
 const rucksackCss = require("rucksack-css");
 
 const postcssPlugins = [rucksackCss];
@@ -16,10 +17,36 @@ module.exports = {
     {
       use: "@gridsome/vue-remark",
       options: {
+        typeName: "Tag",
+        baseDir: "./content/Tags",
+        pathPrefix: "/tags",
+        route: "/:id",
+        template: "./src/templates/Tag.vue",
+      },
+    },
+
+    {
+      use: "@gridsome/vue-remark",
+      options: {
+        typeName: "Picture",
+        baseDir: "./content/images",
+        pathPrefix: "/images",
+        route: "/:id",
+        template: "./src/templates/Picture.vue",
+      },
+    },
+
+    {
+      use: "@gridsome/vue-remark",
+      options: {
         typeName: "Project",
         baseDir: "./content/Projects",
         route: "/project/:title",
         template: "./src/templates/Project.vue",
+        refs: {
+          tags: "Tag",
+          pictures: "Picture",
+        },
       },
     },
     {
@@ -29,6 +56,11 @@ module.exports = {
         baseDir: "./content/BlogPosts",
         route: "/blog/:slug",
         template: "./src/templates/BlogPost.vue",
+        plugins: ["remark-prism"],
+        refs: {
+          tags: "Tag",
+          pictures: "Picture",
+        },
       },
     },
     {

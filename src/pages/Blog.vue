@@ -5,7 +5,7 @@
         <h1>Articles</h1>
         <section>
           <Card v-for='edge in $page.posts.edges' :key='edge.node.id' :title='edge.node.title'
-                :description='edge.node.excerpt' :path='edge.node.path'>
+                :description='edge.node.excerpt' :path='edge.node.path' :cardImage='edge.node.image'>
 
           </Card>
 
