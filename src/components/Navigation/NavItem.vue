@@ -1,6 +1,10 @@
 <template>
   <li class='nav-item'>
-    <g-link :to='to'
+    <g-link v-if='to === "/"'  :to='to'
+            class='px-3 py-2 flex text-sm uppercase font-bold leading-snug' exact>
+      <slot/>
+    </g-link>
+    <g-link v-else  :to='to'
             class='px-3 py-2 flex text-sm uppercase font-bold leading-snug'>
       <slot/>
     </g-link>
@@ -19,3 +23,10 @@ export default {
   },
 }
 </script>
+
+<style>
+.active {
+  @apply text-white;
+  font-weight: 700;
+}
+</style>

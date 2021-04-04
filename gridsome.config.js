@@ -41,7 +41,7 @@ module.exports = {
       options: {
         typeName: "Project",
         baseDir: "./content/Projects",
-        route: "/project/:title",
+        route: "/projects/:title",
         template: "./src/templates/Project.vue",
         refs: {
           tags: "Tag",

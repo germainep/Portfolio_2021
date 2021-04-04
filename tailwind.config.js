@@ -3,7 +3,6 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      textColor: ["active"],
       colors: {
         transparent: "transparent",
         current: "currentColor",
@@ -38,6 +37,7 @@ module.exports = {
       gridColumn: ["first", "last"],
       gridRow: ["first", "last"],
       width: ["first"],
+      textColor: ["active"],
     },
   },
   plugins: [
