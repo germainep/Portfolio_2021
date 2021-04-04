@@ -13,6 +13,7 @@ module.exports = {
   siteUrl: "https://germainep.com",
   titleTemplate: "%s - Germaine P",
   plugins: [
+    { use: "gridsome-plugin-extract-schema" },
     { use: "@gridsome/plugin-sitemap" },
     {
       use: "@gridsome/vue-remark",
@@ -30,8 +31,7 @@ module.exports = {
       options: {
         typeName: "Picture",
         baseDir: "./content/images",
-        pathPrefix: "/images",
-        route: "/:id",
+        route: "/images/:id",
         template: "./src/templates/Picture.vue",
       },
     },

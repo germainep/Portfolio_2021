@@ -1,8 +1,12 @@
 <template>
   <Layout>
-    <main class='Project grid grid-cols-2 md:container mx-auto prose'>
-      <h1 class='col-span-2'>{{ $page.project.title }}</h1>
-      <VueRemarkContent class='col-span-2 grid grid-cols-2 justify-between'>
+    <main class='Project grid grid-cols-2 grid-flow-row sm:container mx-auto prose-lg mt-5'>
+      <h1 class='col-span-2 my-5'>{{ $page.project.title }}</h1>
+
+      <Carousel :images='$page.project.pictures' class='col-span-2 mx-auto'/>
+
+      <VueRemarkContent class='col-span-2 grid lg:grid-cols-2 grid-cols-1 gap-5 justify-between mt-5'>
+
         <template v-slot:tech>
           <TechUsed>
             <Tag v-for='tag in $page.project.tags' :key='tag.id'>{{tag.id}}</Tag>
@@ -10,7 +14,7 @@
         </template>
 
       </VueRemarkContent>
-      <section>
+      <section class='mt-5'>
         <h1>More Projects</h1>
       </section>
     </main>
@@ -26,11 +30,17 @@ query ($id: ID!) {
     tags {
       id
     }
+    pictures {
+      image(width:800)
+      id
+    }
   }
 }
 </page-query>
 
 <script>
+import Carousel from '~/components/Carousel/Carousel'
+import ProjectBrief from '~/components/ProjectBrief/ProjectBrief'
 import Tag from '~/components/Tag/Tag'
 import TechUsed from '~/components/TechUsed/TechUsed'
 
@@ -50,7 +60,7 @@ export default {
       ]
     }
   },
-  components : {TechUsed, Tag}
+  components : {TechUsed, Tag, Carousel, ProjectBrief}
 }
 </script>
 

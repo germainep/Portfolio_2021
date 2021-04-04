@@ -1,5 +1,4 @@
 <template>
-  <g-image/>
 </template>
 
 <script>

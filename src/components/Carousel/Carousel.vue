@@ -1,12 +1,19 @@
 <template>
-    <div class="Carousel col-span-2 place-self-center">
-        <div  v-show='imagesCopy.length > 1'
-             class='grid grid-flow-col-dense grid-cols-5 grid-rows-2 items-center'>
-          <g-image v-for='(image, index) in imagesCopy'  :key='index' :src='image.src' :alt='image.alt'  width='25'
-                   class='thumbnail-image first:col-span-5 first:w-full'
-                   v-on:click='changeImage(index, $event)'></g-image>
+    <div class="Carousel w-5/6">
+        <div  v-show='imagesCopy.length >= 1'
+             class='grid grid-cols-4 grid-flow-row-dense grid-row-2 items-center'>
+          <div class='first:col-span-4 first:w-1/2 mx-auto object-cover overflow-hidden' v-for='(image,
+          index) in
+          imagesCopy'>
+          <g-image
+                   :key='index'
+                   :src='image.image.src'
+                   :alt='image.id'
+                   class='thumbnail-image object-cover w-full mx-auto self-center'
+                   v-on:click='changeImage(index, $event)'/>
         </div>
       </div>
+    </div>
 </template>
 
 <script>

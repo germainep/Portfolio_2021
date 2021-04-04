@@ -30,7 +30,7 @@
           Your business is more than <span class='text-primary-600'>just</span> a website
         </h2>
 
-        <div class='flex flex-row my-8 h-auto px-4'>
+        <div class='flex md:flex-row flex-col my-8 h-auto px-4 gap-8'>
           <div class='flex flex-col gap-5 flex-shrink items-center'>
             <div class='mx-auto'>
               <svg xmlns='http://www.w3.org/2000/svg' width='250' height='160' viewBox='0 0 250 160'>
@@ -114,7 +114,7 @@
 
       <section v-if='$page.projects'>
         <h2 class='text-left mb-8'>Recent Work</h2>
-        <div class='grid grid-cols-2 gap-2 items-center justify-around'>
+        <div class='grid grid-row-1 md:grid-cols-2 gap-3 items-center justify-around w-full mx-auto'>
           <Card v-for='edge in $page.projects.edges' :key='edge.node.id' :title='edge.node.title'
                 :description='edge.node.short' :path='edge.node.path' :github='edge.node.github'
                 :live='edge.node.url' :image='edge.node.pictures[0]'></Card>
@@ -138,9 +138,9 @@ query Project{
         github
         id
         short: short_desc
-        pictures {
+        pictures(limit:1) {
           id
-          src
+          image(width:200, fit:cover)
         }
       }
     }
