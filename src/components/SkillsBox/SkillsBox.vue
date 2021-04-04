@@ -1,10 +1,10 @@
 <template>
   <div
-      class='SkillsBox grid grid-cols-3 bg-primary-500 w-2/3 mx-auto mt-8 rounded-lg justify-center items-center shadow-sm shadow-2xl p-2'>
-    <div v-for='type in skillTypes'>
-      <h3 class='text-2xl text-center p-4'>{{ type.name }}</h3>
-      <ul class=' bg-primary-100 border-2 border-primary-500 border-opacity-100 p-4 rounded-lg shadow-sm'>
-        <li v-for='skills in type.skills'> {{ skills.skill }}</li>
+      class='SkillsBox grid grid-cols-3 gap-0.5 bg-primary-500 mx-auto rounded-lg justify-center items-center shadow-sm shadow-2xl p-2'>
+    <div v-for='type in skillTypes' class='w-auto'>
+      <h3 class='text-2xl text-center min-w-min p-4'>{{ type.name }}</h3>
+      <ul class=' bg-primary-100 border-2 border-primary-500 border-opacity-100 px-4 py-2 rounded-lg shadow-sm h-60'>
+        <li v-for='skills in type.skills' class=' mb-1'> {{ skills.skill }}</li>
       </ul>
     </div>
 
@@ -19,15 +19,18 @@ export default {
     skillTypes: [
       {
         name: 'FrontEnd',
-        skills: [{skill: 'test1'}, {skill: 'test2'}, {skill: 'test3'}, {skill: 'test4'}],
+        skills: [{skill: 'HTML'}, {skill: 'CSS'}, {skill: 'JavaScript'}, {skill: 'React'}, {skill: 'VueJs'}, {skill:
+              'Sass/Scss'}, {skill: 'Stylus'}],
       },
       {
         name: 'BackEnd',
-        skills: [{skill: 'test1'}, {skill: 'test2'}, {skill: 'test3'}, {skill: 'test4'}],
+        skills: [{skill: 'PostgreSQL'}, {skill: 'Python'}, {skill: 'NodeJs'}, {skill: 'AWS'}, {skill: 'MongoDB'},
+          {skill: 'MySQL'}, {skill: 'RESTful API Design'}],
       },
       {
         name: 'Other Skills',
-        skills: [{skill: 'test1'}, {skill: 'test2'}, {skill: 'test3'}, {skill: 'test4'}],
+        skills: [{skill: 'Responsive Web Design'}, {skill: 'Search Engine Optimization'}, {skill:
+              'HTML Email Creation'}],
       },
     ],
   } ),

@@ -30,8 +30,8 @@
           Your business is more than <span class='text-primary-600'>just</span> a website
         </h2>
 
-        <div class='grid grid-cols-3 gap-3 my-8 h-auto px-4'>
-          <div class='grid grid-rows-2 items-center'>
+        <div class='flex md:flex-row flex-col my-8 h-auto px-4 gap-8'>
+          <div class='flex flex-col gap-5 flex-shrink items-center'>
             <div class='mx-auto'>
               <svg xmlns='http://www.w3.org/2000/svg' width='250' height='160' viewBox='0 0 250 160'>
                 <path
@@ -53,7 +53,7 @@
             <p class='text-center'>What good is a website if customers can’t find you.</p>
           </div>
 
-          <div class='grid grid-rows-2 items-center'>
+          <div class='flex flex-col gap-5 flex-shrink items-center'>
             <div class='mx-auto'>
               <svg class='' xmlns='http://www.w3.org/2000/svg' width='197.594' height='160'
                    viewBox='0 0 197.594 160'>
@@ -71,7 +71,7 @@
             <p class='text-center'>I provide clean tested code using best practices.
                                    application.</p>
           </div>
-          <div class='grid grid-rows-2 items-center'>
+          <div class='flex flex-col gap-5 flex-shrink items-center'>
             <div class='mx-auto'>
               <svg xmlns='http://www.w3.org/2000/svg' width='260' height='170' viewBox='0 0 260 170'>
                 <g
@@ -107,8 +107,18 @@
       </section>
 
       <section class='skills p-8'>
-        <h2 class='text-right'>Skills</h2>
+        <h2 class='text-right mb-8'>Skills</h2>
         <SkillsBox/>
+
+      </section>
+
+      <section v-if='$page.projects'>
+        <h2 class='text-left mb-8'>Recent Work</h2>
+        <div class='grid grid-row-1 md:grid-cols-2 gap-3 items-center justify-around w-full mx-auto'>
+          <Card v-for='edge in $page.projects.edges' :key='edge.node.id' :title='edge.node.title'
+                :description='edge.node.short' :path='edge.node.path' :github='edge.node.github'
+                :live='edge.node.url' :image='edge.node.pictures[0]'></Card>
+        </div>
 
       </section>
     </main>
@@ -117,15 +127,37 @@
   </Layout>
 </template>
 
+<page-query>
+query Project{
+  projects: allProject{
+    edges{
+      node{
+        title
+        path
+        url
+        github
+        id
+        short: short_desc
+        pictures(limit:1) {
+          id
+          image(width:200, fit:cover)
+        }
+      }
+    }
+  }
+}
+</page-query>
+
 <script>
 import Button from '~/components/Button/Button'
+import Card from '~/components/Card/Card'
 import SkillsBox from '~/components/SkillsBox/SkillsBox'
 
 export default {
   metaInfo: {
     title: 'Home',
   },
-  components: {SkillsBox, Button},
+  components: {SkillsBox, Button, Card},
 }
 </script>
 
