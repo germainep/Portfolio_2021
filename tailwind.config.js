@@ -34,6 +34,9 @@ module.exports = {
   },
   variants: {
     extend: {
+      gridColumn: ["first", "last"],
+      gridRow: ["first", "last"],
+      width: ["first"],
       textColor: ["active"],
     },
   },

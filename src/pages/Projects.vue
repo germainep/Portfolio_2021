@@ -2,10 +2,10 @@
   <Layout>
     <main>
       <h1>Recent Work</h1>
-      <section v-if='$page'>
+      <section v-if='$page.projects.edges'>
         <Card v-for='edge in $page.projects.edges' :key='edge.node.id' :title='edge.node.title'
               :description='edge.node.short' :path='edge.node.path' :github='edge.node.github'
-              :live='edge.node.url'>
+              :live='edge.node.url' :image='edge.node.pictures[0]'>
 
         </Card>
 
@@ -29,6 +29,10 @@
           github
           id
           short: short_desc
+          pictures {
+            id
+            image(width:400)
+          }
         }
       }
     }
