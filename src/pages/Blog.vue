@@ -2,8 +2,8 @@
   <Layout>
     <main>
       <template v-if='($page.posts.edges)'>
-        <h1>Articles</h1>
-        <section>
+        <h1 class='mb-8'>Articles</h1>
+        <section class='grid grid-col-1 md:grid-col-2 2xl:grid-col-3 gap-5' >
           <Card v-for='edge in $page.posts.edges' :key='edge.node.id' :title='edge.node.title'
                 :description='edge.node.excerpt' :path='edge.node.path' :image='edge.node.pictures || null'>
 

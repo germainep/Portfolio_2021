@@ -1,15 +1,15 @@
 <template>
   <Layout>
-    <main>
+    <main class='mx-auto'>
       <section class='hero pt-8 bg-gradient-to-b from-primary-500 to-accent-500'>
-        <div class='grid grid-cols-2 z-0'>
-          <div class='w-1/2 mx-auto mb-8'>
+        <div class='grid grid-cols-1 sm:grid-cols-2 z-0 gap-5 w-5/6 mx-auto'>
+          <div class='mx-auto mb-8'>
             <p class='text-white text-5xl'>
               Hi, I’m Germaine, Full-Stack Software Engineer
             </p>
             <Button class='mt-8 bg-primary-300'>Download Resume</Button>
           </div>
-          <div class='w-1/2 m-auto'>
+          <div class='mx-auto'>
             <span class='quote text-accent-200 text-lg w-full'>
               “Creativity can solve almost any problem. The creative act the defeat of
               habit by originality, overcomes everything. “ ~ George Lois
@@ -26,12 +26,12 @@
       </section>
 
       <section class='mt-20 p-8'>
-        <h2 class='text-4xl text-center'>
+        <h2 class='text-4xl text-center mb-20'>
           Your business is more than <span class='text-primary-600'>just</span> a website
         </h2>
 
         <div class='flex md:flex-row flex-col my-8 h-auto px-4 gap-8'>
-          <div class='flex flex-col gap-5 flex-shrink items-center'>
+          <div class='flex flex-col gap-5 flex-grow-0 items-center'>
             <div class='mx-auto'>
               <svg xmlns='http://www.w3.org/2000/svg' width='250' height='160' viewBox='0 0 250 160'>
                 <path
@@ -53,7 +53,7 @@
             <p class='text-center'>What good is a website if customers can’t find you.</p>
           </div>
 
-          <div class='flex flex-col gap-5 flex-shrink items-center'>
+          <div class='flex flex-col gap-5 flex-grow-0 items-center'>
             <div class='mx-auto'>
               <svg class='' xmlns='http://www.w3.org/2000/svg' width='197.594' height='160'
                    viewBox='0 0 197.594 160'>
@@ -68,10 +68,9 @@
               </svg>
             </div>
             <h3 class='text-2xl text-center'>Web Development</h3>
-            <p class='text-center'>I provide clean tested code using best practices.
-                                   application.</p>
+            <p class='text-center'>I provide clean tested code using best practices.</p>
           </div>
-          <div class='flex flex-col gap-5 flex-shrink items-center'>
+          <div class='flex flex-col gap-5 flex-grow-0 items-center'>
             <div class='mx-auto'>
               <svg xmlns='http://www.w3.org/2000/svg' width='260' height='170' viewBox='0 0 260 170'>
                 <g
@@ -107,14 +106,15 @@
       </section>
 
       <section class='skills p-8'>
-        <h2 class='text-right mb-8'>Skills</h2>
+        <h2 class='text-right mb-20'>Skills</h2>
         <SkillsBox/>
 
       </section>
 
       <section v-if='$page.projects'>
-        <h2 class='text-left mb-8'>Recent Work</h2>
-        <div class='grid grid-row-1 md:grid-cols-2 gap-3 items-center justify-around w-full mx-auto'>
+        <h2 class='text-left mb-20'>Recent Work</h2>
+        <div
+            class='grid grid-cols-1 sm:grid-cols-2 gap-5 items-center justify-around w-full mx-auto'>
           <Card v-for='edge in $page.projects.edges' :key='edge.node.id' :title='edge.node.title'
                 :description='edge.node.short' :path='edge.node.path' :github='edge.node.github'
                 :live='edge.node.url' :image='edge.node.pictures[0]'></Card>
