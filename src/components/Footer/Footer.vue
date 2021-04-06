@@ -34,26 +34,26 @@
         </form>
       </div>
 
-      <div class='grid grid-cols-2 gap-3 px-4'>
+      <div class='grid grid-cols-1 md:grid-cols-2 gap-5 px-4'>
         <div>
-          <h3 class='mb-8 text-2xl text-primary-200'>About me</h3>
+          <h3 class='mb-8 text-2xl text-primary-200 text-center md:text-left'>About me</h3>
           <p>Software development is my passion. I love to build thing. Nothing brings me
              more joy than
              bringing something to life. To turn an idea into a reality there is nothing to beat that feeling of
              accomplishment.</p>
         </div>
-        <div>
-          <h3 class='flex flex-rows items-center text-center text-2xl mb-8'>You Can Usually Find Me Somewhere
+        <div class='my-auto'>
+          <h3 class='text-center text-2xl mb-8'>You Can Usually Find Me Somewhere
                                                                             Below</h3>
           <div class=' flex items-center justify-around'>
             <g-link href='https://github.com/germainep'>
-              <font-awesome :icon="['fab', 'github']" color='white' size='2x'/>
+              <font-awesome :icon="['fab', 'github']" color='white' size='3x'/>
             </g-link>
             <g-link href='https://twitter.com/G_as_in_Genius'>
-              <font-awesome :icon="['fab', 'twitter']" color='white' size='2x'/>
+              <font-awesome :icon="['fab', 'twitter']" color='white' size='3x'/>
             </g-link>
             <g-link href='https://linkedin.com/in/germaine-p'>
-              <font-awesome :icon="['fab', 'linkedin-in']" class='fill-accent' color='white' size='2x'/>
+              <font-awesome :icon="['fab', 'linkedin-in']" class='fill-accent' color='white' size='3x'/>
             </g-link>
           </div>
         </div>

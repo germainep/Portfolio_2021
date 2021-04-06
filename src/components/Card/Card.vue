@@ -1,5 +1,5 @@
 <template>
-  <div class='Card flex flex-col rounded-lg shadow-sm shadow-2xl max-w-sm bg-accent-900'>
+  <div class='Card flex flex-col rounded-lg shadow-sm shadow-2xl max-w-min max-h- bg-accent-900 mx-auto'>
     <g-link :to='path'>
         <div  class='relative h-64 flex-shrink'>
           <g-image v-if='image !== null' :src='image.image' :alt='image.id'
@@ -8,8 +8,8 @@
         </div>
     </g-link>
 
-    <div class=' flex-shrink-0 rounded-b-lg bg-primary-800 items-center py-5 px-8'>
-      <p class='text-accent-100 w-full'>{{ description }}</p>
+    <div class=' flex-shrink rounded-b-lg bg-primary-800 items-center py-5 px-8'>
+      <p class='text-accent-100 w-full h-12'>{{ description }}</p>
       <div v-show='github || live' class='flex flex-row content-evenly justify-evenly '>
         <IconButton type="github" :href="github">Github</IconButton>
         <IconButton type="live" :href="live">Live Site</IconButton>

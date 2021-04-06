@@ -1,8 +1,8 @@
 <template>
   <Layout>
-    <main>
-      <h1>Recent Work</h1>
-      <section v-if='$page.projects.edges'>
+    <main class='container mx-auto'>
+      <h1 class='mb-8'>Recent Work</h1>
+      <section v-if='$page.projects.edges' class='grid 2xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-5'>
         <Card v-for='edge in $page.projects.edges' :key='edge.node.id' :title='edge.node.title'
               :description='edge.node.short' :path='edge.node.path' :github='edge.node.github'
               :live='edge.node.url' :image='edge.node.pictures[0]'>
