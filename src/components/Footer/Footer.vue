@@ -1,9 +1,9 @@
 <template>
-  <footer class='bg-primary-500 py-2 z-10 mt-10'>
+  <footer class='bg-primary-500 py-2 z-10 mt-10 text-primary-100'>
     <div class='grid grid-rows-2 gap-6 p-12 lg:p-4 items-center justify-center'>
       <div class='contact w-full mx-auto lg:w-1/2'>
         <form class='grid grid-cols-2 grid-rows-3 gap-3 w-full items-center'>
-          <h1 class='col-span-2 text-center text-4xl'>Request a quote</h1>
+          <h2 class='col-span-2 text-center text-4xl'>Request a quote</h2>
 
           <div class='flex flex-col mb-4'>
             <label class='text-sm' for='name'>Name</label>

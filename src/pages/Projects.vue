@@ -31,7 +31,7 @@
           short: short_desc
           pictures {
             id
-            image(width:400)
+            image
           }
         }
       }

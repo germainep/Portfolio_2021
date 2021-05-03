@@ -31,8 +31,8 @@ query ($id: ID!) {
       id
     }
     pictures {
-      image(width:800)
       id
+      image
     }
   }
 }
@@ -65,7 +65,5 @@ export default {
 </script>
 
 <style>
-#project-brief > p {
-  border : 1px solid red;
-}
+
 </style>
