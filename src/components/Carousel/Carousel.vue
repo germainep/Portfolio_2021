@@ -7,7 +7,7 @@
           imagesCopy'>
           <g-image
                    :key='index'
-                   :src='image.image.src'
+                   :src='image.src'
                    :alt='image.id'
                    class='thumbnail-image object-cover w-full mx-auto self-center'
                    v-on:click='changeImage(index, $event)'/>
@@ -15,6 +15,7 @@
       </div>
     </div>
 </template>
+
 
 <script>
     export default {
@@ -30,7 +31,8 @@
       },
       methods:{
           changeImage: function(index, el) {
-            const target = {src: el.target.src, alt: el.target.alt}
+            const target = {src: el.target.src, id: el.target.alt}
+            console.log(el.target.alt)
             this.imagesCopy.splice(index, 1)
             this.imagesCopy.unshift(target)
           }

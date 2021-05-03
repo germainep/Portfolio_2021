@@ -1,6 +1,6 @@
 <template>
   <header
-      class='bg-primary-500 relative grid grid-cols-2 items-center justify-between px-2 py-3 navbar-expand-lg'>
+      class='bg-primary-500 relative grid grid-cols-2 items-center justify-between px-2 py-3 navbar-expand-lg sticky top-0 z-50'>
     <div class='logo'>
       <Logo/>
     </div>

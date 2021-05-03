@@ -7,7 +7,8 @@
             <p class='text-white text-5xl'>
               Hi, I’m Germaine, Full-Stack Software Engineer
             </p>
-            <Button class='mt-8 bg-primary-300'>Download Resume</Button>
+            <a
+                href='Germaine_P_Resume29-04-2021.pdf'><Button class='mt-8 bg-primary-300'>Download Resume</Button></a>
           </div>
           <div class='mx-auto'>
             <span class='quote text-accent-200 text-lg w-full'>
@@ -114,7 +115,7 @@
       <section v-if='$page.projects'>
         <h2 class='text-left mb-20'>Recent Work</h2>
         <div
-            class='grid grid-cols-1 sm:grid-cols-2 gap-5 items-center justify-around w-full mx-auto'>
+            class='grid grid-cols-1 md:grid-cols-2 gap-5 items-center justify-around w-full mx-auto'>
           <Card v-for='edge in $page.projects.edges' :key='edge.node.id' :title='edge.node.title'
                 :description='edge.node.short' :path='edge.node.path' :github='edge.node.github'
                 :live='edge.node.url' :image='edge.node.pictures[0]'></Card>
