@@ -8,7 +8,8 @@
               Hi, I’m Germaine, Full-Stack Software Engineer
             </p>
             <a
-                href='Germaine_P_Resume29-04-2021.pdf'><Button class='mt-8 bg-primary-300'>Download Resume</Button></a>
+                href='Germaine_Pannell_Resume.pdf'><Button
+                class='mt-8 bg-primary-300'>Download Resume</Button></a>
           </div>
           <div class='mx-auto'>
             <span class='quote text-accent-200 text-lg w-full'>
