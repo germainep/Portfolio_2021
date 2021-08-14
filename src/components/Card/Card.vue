@@ -1,5 +1,5 @@
 <template>
-  <div class='Card flex flex-col rounded-lg shadow-sm shadow-2xl max-w-min max-h- bg-accent-900 mx-auto'>
+  <div class='Card flex flex-col rounded-lg shadow-sm shadow-2xl bg-accent-900 mx-auto my-7'>
     <g-link :to='path'>
         <div  class='relative h-64 flex-shrink'>
           <g-image v-if='image !== null' :src='image.image' :alt='image.id'
