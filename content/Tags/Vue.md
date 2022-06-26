@@ -1,5 +1,0 @@
----
-id: Vue
-color: green
-
----

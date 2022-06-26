@@ -1,4 +1,0 @@
----
-id: AWS Amplify
-
----

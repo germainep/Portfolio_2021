@@ -1,0 +1,10 @@
+{
+  "extends": ["@remix-run/eslint-config", "@remix-run/eslint-config/node", "prettier", "plugin:prettier/recommended"],
+  "plugins": ["prettier"],
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "prettier/prettier": "error"
+  }
+}

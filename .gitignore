@@ -1,11 +1,6 @@
-*.log
-.cache
-.DS_Store
-src/.temp
 node_modules
-dist/
+/.idea
+/.cache
+/build
+/public/build
 .env
-.env.*
-.idea/
-.cache/
-.temp/
