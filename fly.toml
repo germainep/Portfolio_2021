@@ -1,7 +1,6 @@
-# fly.toml file generated for silent-waterfall-1187 on 2022-05-10T17:52:48-04:00
+# fly.toml file generated for icy-wildflower-9228 on 2022-07-04T10:26:18-04:00
 
-app = "silent-waterfall-1187"
-
+app = "icy-wildflower-9228"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
@@ -19,7 +18,6 @@ processes = []
   processes = ["app"]
   protocol = "tcp"
   script_checks = []
-
   [services.concurrency]
     hard_limit = 25
     soft_limit = 20
