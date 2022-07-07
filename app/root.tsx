@@ -11,6 +11,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import React from "react";
 
 import Navigation from "~/components/Navigation/Navbar";
 
@@ -18,8 +19,9 @@ import styles from "./styles/app.css";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "Germaine P.",
   viewport: "width=device-width,initial-scale=1",
+  description: "Personal Portfolio for Germaine P",
+  keywords: "web developer, Danville VA, javascript, react, remix",
 });
 
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
@@ -46,19 +48,36 @@ export const ErrorBoundary: ErrorBoundaryComponent = ({ error }) => {
 
 export default function App() {
   return (
+    <Document>
+      <Layout>
+        <Outlet />
+      </Layout>
+      <ScrollRestoration />
+    </Document>
+  );
+}
+
+function Document({ children, title }: React.PropsWithChildren<any>) {
+  return (
     <html lang="en">
       <head>
-        <title>Germaine P.</title>
+        <title>{title ? title : "Germaine P."}</title>
         <Meta />
         <Links />
       </head>
       <body className="bg-background">
-        <Navigation />
-        <Outlet />
-        <ScrollRestoration />
-        <Scripts />
-        <LiveReload />
+        {children}
+        {process.env.NODE_ENV === "development" ? <LiveReload /> : null}
       </body>
     </html>
+  );
+}
+
+function Layout({ children }: React.PropsWithChildren<{}>) {
+  return (
+    <>
+      <Navigation />
+      <div className="container mx-auto">{children}</div>
+    </>
   );
 }
